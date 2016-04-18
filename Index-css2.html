@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+<style>
+@font-face
+{
+font-family: myFirstFont;
+}
+
+div{
+	font-family:myFirstFont;
+	width:100px;
+	height:75px;
+	background:linear-gradient(to bottom,white,green);
+	background:-webkit-linear-gradient(bottom,white,green);
+	background:-moz-linear-gradient(bottom,white,green);\
+	background:-ms-linear-gradient(bottom,white,green);
+	border:1px solid red;
+	border-radius:10px;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	-ms-border-radius:10px;
+	-o-border-radius:10px;
+	text-shadow:1px 1px 1px red;
+	word-wrap:break-word;
+}
+div#div2{
+	transform:rotate(60deg);
+	-ms-transform:rotate(60deg);/*IE 9*/
+	-webkit-transform:rotate(60deg); /*Safari and Chrome */
+	-moz-transform:rotate(60deg);/*FireFox;*/
+	-o-transform:rotate(60deg); /*Opera*/
+}
+</style>
+</head>
+<body>
+
+<div>你好。这是一个 DIV 元素。1111111111111111</div>
+
+<div id="div2">你好。这是一个 DIV 元素。111111111111</div>
+
+</body>
+</html>

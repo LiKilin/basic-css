@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+.container{
+    margin-right: auto;
+    margin-left: auto;
+    width:750px;
+}
+.row{
+    overflow: hidden;
+    zoom:1;
+    margin-top: 30px;
+}
+table{
+    color: #f00;
+}
+table thead{
+    color:#fff;
+}
+table td{
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    font-weight: bold;
+}
+table thead td{
+    background-color: #000;
+}
+tbody tr:nth-child(even){
+    background-color: #C8CFC8;
+}
+tbody tr:nth-child(n+4){
+    color:#000;
+}
+#text{
+    width: 150px;
+    border:1px solid #CDCDCD;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+}
+#text:focus{
+    width:250px;
+    box-shadow:2px 2px 5px #CDCDCD;
+}
+
+#banner{
+    width: 400px;
+    height: 200px;
+    border: 1px solid #000;
+    position: relative;
+    overflow: hidden;
+}
+#banner ul{
+    position: absolute;
+    overflow: hidden;
+    zoom: 1;
+    list-style-type: none;
+}
+
+#pic{
+    width: 1200px;
+    height: 200px;
+    top:0;
+    left:0;
+    position: absolute;
+    -webkit-transition: 2s;
+    -moz-transition: 2s;
+    -ms-transition: 2s;
+    -o-transition: 2s;
+    transition: 2s;
+}
+
+#pic li{
+    width: 400px;
+    height: 200px;
+    float: left;
+}
+#green{
+    background-color: #00ff00;
+}
+#blue{
+    background-color: #0000ff;
+}
+#yellow{
+    background-color: #ffff00;
+}
+
+#point{
+    right: 0;
+    bottom: 0;
+
+}
+#point li{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    background: rgba(255,255,255,0.5);
+    float: left;
+    margin-left: 3px;
+}
+#point li label{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+#banner1:checked~#pic{
+    left:0;
+}
+#banner2:checked~#pic{
+    left:-400px;
+}
+#banner3:checked~#pic{
+    left:-800px;
+}
+
+    </style>
+<body>
+    <div class="container">
+        <div class="row">
+            <table>
+                <thead>
+                    <tr>
+                        <td>排名</td>
+                        <td>网站</td>
+                        <td>热度</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1.</td>
+                        <td>百度前端技术学院</td>
+                        <td>13000</td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>百度前端技术学院</td>
+                        <td>12000</td>
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td>百度前端技术学院</td>
+                        <td>11000</td>
+                    </tr>
+                    <tr>
+                        <td>4.</td>
+                        <td>百度前端技术学院</td>
+                        <td>10000</td>
+                    </tr>
+                    <tr>
+                        <td>5.</td>
+                        <td>百度前端技术学院</td>
+                        <td>9000</td>
+                    </tr>
+                    <tr>
+                        <td>6.</td>
+                        <td>百度前端技术学院</td>
+                        <td>8000</td>
+                    </tr>
+                    <tr>
+                        <td>7.</td>
+                        <td>百度前端技术学院</td>
+                        <td>7000</td>
+                    </tr>
+                    <tr>
+                        <td>8.</td>
+                        <td>百度前端技术学院</td>
+                        <td>6000</td>
+                    </tr>
+                    <tr>
+                        <td>9.</td>
+                        <td>百度前端技术学院</td>
+                        <td>5000</td>
+                    </tr>
+                    <tr>
+                        <td>10.</td>
+                        <td>百度前端技术学院</td>
+                        <td>4000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="row">
+            <input id="text" type="text" />
+        </div>
+
+        <div class="row">
+            <div id="banner">
+                <input type="radio" name="b" id="banner1" hidden="hidden" checked="checked"/>
+                <input type="radio" name="b" id="banner2" hidden="hidden" />
+                <input type="radio" name="b" id="banner3" hidden="hidden" />
+                <ul id="pic">
+                    <li id="green"></li>
+                    <li id="blue"></li>
+                    <li id="yellow"></li>
+                </ul>
+                <ul id="point">
+                    <li><label for="banner1" >1</label></li>
+                    <li><label for="banner2" >2</label></li>
+                    <li><label for="banner3" >3</label></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
