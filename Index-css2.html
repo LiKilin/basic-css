@@ -16,6 +16,8 @@ div{
 	background:-webkit-linear-gradient(bottom,white,green);
 	background:-moz-linear-gradient(bottom,white,green);\
 	background:-ms-linear-gradient(bottom,white,green);
+	animation:myfirst 2s;
+	-webkit-animation:myfirst 2s;
 	border:1px solid red;
 	border-radius:10px;
 	-webkit-border-radius:10px;
@@ -25,12 +27,19 @@ div{
 	text-shadow:1px 1px 1px red;
 	word-wrap:break-word;
 }
-div#div2{
-	transform:rotate(60deg);
-	-ms-transform:rotate(60deg);/*IE 9*/
-	-webkit-transform:rotate(60deg); /*Safari and Chrome */
-	-moz-transform:rotate(60deg);/*FireFox;*/
-	-o-transform:rotate(60deg); /*Opera*/
+div#div2:hover{
+	transition-delay:1s;
+	transition-duration:2s;
+	transform-style:flat;
+	transform:rotate(30deg) translate(100px,100px);
+	-ms-transform:rotate(30deg) translate(100px,100px); /* IE 9 */
+	-webkit-transform:rotate(30deg) translate(100px,100px); /*Safari and Chrome */
+	-moz-transform:rotate(30deg) translate(100px,100px);/*FireFox;*/
+	-o-transform:rotate(30deg) translate(100px,100px); /*Opera*/
+}
+@keyframes myfirst{
+	from {background:linear-gradient(to bottom,white,green);}
+	to{background:red;}
 }
 </style>
 </head>
